@@ -8,7 +8,7 @@ $Panjang = 20;
 $Lebar = 4;
 $cm = "cm";
 
-$luas = $Panjang * $Lebar;
+$luas = $Panjang + $Lebar;
 $keliling = 2 * ($Panjang + $Lebar);
 
 echo "Luas Persegi Panjang : $Panjang + $Lebar = ". $luas . " " .$cm . "<br>";
