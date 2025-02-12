@@ -9,8 +9,8 @@ echo "<center><h3>Studi Kasus</h3></center>";
 echo "<hr>";
 
 
-$jabatan = "Manager";
-$jam = 0;
+$jabatan = "Staff";
+$jam = 300;
 
 
 
@@ -39,11 +39,14 @@ elseif ($gaji <= 5000000) {
 elseif ($gaji > 5000000 ) {
     $pajak = 15;
 } 
+$jam_bonus = $jam - 200;
 
-if ($jam > 200) {
-    $bonus = ($jam - 200) * 20000;
+if ($jam_bonus >= 1) {
+    $bonus = $jam_bonus * 20000;
+    $ucapan_bonus = "Selamat Anda Mendapatkan Bonus Karena Jam Kerja Anda lebih $jam_bonus dari 200 jam kerja <br>";
 } else{
     $bonus = 0;
+    $ucapan_bonus = "Maaf Anda Belum Mendapatkan Bonus Karena Jam Kerja Anda Kurang Dari 200 Jam Kerja <br>";
 }
 
 
@@ -59,7 +62,13 @@ function rupiah($angka){
 };
 echo "Jabatan : $jabatan <br>";
 echo "Gaji Pokok : " . rupiah ($gaji). "<br>";
-echo "Pajak : " . $pajak . "%<br>";
+echo "Pajak : " . $pajak . "<br>";
 echo "Total Pajak: " . rupiah ($total_pajak). "<br>";
+// if ($bonus > 1) {
+//     echo "Selamat Anda Mendapatkan Bonus Karena Jam Kerja Anda lebih $jam_bonus dari 200 jam kerja <br>";
+// }else {
+//     echo "Maaf Anda Belum Mendapatkan Bonus Karena Jam Kerja Anda Kurang Dari 200 Jam Kerja <br>";
+// }
+echo $ucapan_bonus;
 echo "Bonus : " . rupiah ($bonus). "<br>";
 echo "Gaji Bersih : " . rupiah ($gaji_bersih). "<br>";
