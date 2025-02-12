@@ -1,5 +1,7 @@
 <?php
 
+echo "<center><h2>Review</h2></center>";
+echo "<hr>";
 
 $nama_lengkap = "Rais Bima Prayata";
 $usia = "15 tahun";
@@ -17,4 +19,5 @@ echo
 "<br> Usia : " . $usia .
 "<br> Alamat : " . $alamat .
 "<br> Anak Ke : " . $anak_ke .
-"<br>" ;
+"<hr> " ;
+
