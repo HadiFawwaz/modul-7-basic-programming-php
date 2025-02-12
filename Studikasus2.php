@@ -1,22 +1,47 @@
 <?php
 
-echo "Studi Kasus 2";
-echo "<hr>";
-$member = "gold";
-$belanja = 1200000;
+$member = "Non-Member"; //-Jenis Member nya : 'gold', 'silv', 'Non-Member'.
+$Diskon = 0;
+$totalBelanja = 1200000;
 
-if ($belanja < 1000000) {
-    $diskon = 0;
-} 
-elseif ($belanja >= 1000000 && $belanja < 1499999) {
-    $diskon = 3;
-} else if ($belanja >= 1500000) {
-    $diskon = 5;
+// =Logic nya============
+if ($member == "gold") {
+    if ($totalBelanja >= 1500000) {
+        $Diskon = 20;
+    } else if ($totalBelanja >= 1000000 && $totalBelanja <= 1499000) {
+        $Diskon = 15;
+    } else if ($totalBelanja < 1000000) {
+        $Diskon = 10;
+    }
+
+} else if ($member == "silv") {
+    if ($totalBelanja >= 1500000) {
+        $Diskon = 15;
+    } else if ($totalBelanja >= 1000000 && $totalBelanja <= 1500000) {
+        $Diskon = 10;
+    } else if ($totalBelanja < 1000000) {
+        $Diskon = 5;
+    }
+
+
+} else if ($member == "Non-Member") {
+    if ($totalBelanja >= 1500000) {
+        $Diskon = 10;
+    } else if ($totalBelanja >= 1000000 && $totalBelanja <= 1500000) {
+        $Diskon = 5;
+    } else if ($totalBelanja <= 1000000) {
+        $Diskon = 0;
+    }
 }
 
+// rumus=======
+$potongan = ($Diskon / 100) * $totalBelanja;
+$totalBayar = $totalBelanja - $potongan;
 
-if ($member = "Non-Member") {
-    $diskon = $diskon + 0;
-} else if ($member = "silver" && $belanja < 1000000) {
-  $diskon = $diskon + 5;
-}
+// hasil======
+echo "==== Total Pembelanjaan ===<br>";
+echo "Total Belanja : Rp " . $totalBelanja . "<br>";
+echo "Jenis Member : " . $member . "<br>";
+echo "Diskon : " . $Diskon . "%<br>";
+echo "Potongan : Rp " . $potongan. "<br>";
+echo "Total Bayar : Rp " . $totalBayar. "<br>";
