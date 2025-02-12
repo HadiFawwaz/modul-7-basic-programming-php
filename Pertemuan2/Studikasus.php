@@ -9,7 +9,7 @@ echo "<center><h3>Studi Kasus</h3></center>";
 echo "<hr>";
 
 
-$jabatan = "Staff";
+$jabatan = "Manager";
 $jam = 300;
 
 
@@ -43,7 +43,7 @@ $jam_bonus = $jam - 200;
 
 if ($jam_bonus >= 1) {
     $bonus = $jam_bonus * 20000;
-    $ucapan_bonus = "Selamat Anda Mendapatkan Bonus Karena Jam Kerja Anda lebih $jam_bonus dari 200 jam kerja <br>";
+    $ucapan_bonus = "Selamat Anda Mendapatkan Bonus Karena Jam Kerja Anda lebih $jam_bonus jam dari 200 jam kerja <br>";
 } else{
     $bonus = 0;
     $ucapan_bonus = "Maaf Anda Belum Mendapatkan Bonus Karena Jam Kerja Anda Kurang Dari 200 Jam Kerja <br>";
