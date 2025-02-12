@@ -21,5 +21,10 @@ echo "Usia : $usia <br>";
 echo "Tanggal Lahir : $tanggal_lahir <br>";
 echo "Tempat Lahir  : $tempat_lahir <br>";
 
-echo "Hallo Nama Saya " .$nama_lengkap. "<br> Alamat " .$alamat.
-"<br> Usia " . $usia . "<br>";
+echo 
+"<br> Hello Nama Saya : " . $nama_lengkap .
+"<br> Usia : " . $usia .
+"<br> Alamat : " . $alamat .
+"<br> Tanggal Lahir : " . $tanggal_lahir .
+"<br> Tempat Lahir : " . $tempat_lahir .
+"<br>" ;
