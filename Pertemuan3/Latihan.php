@@ -1,16 +1,18 @@
 <?php
+echo "<hr>";
+echo "<center><h3>Tugas</h3></center>";
+echo "<hr> <center>";
 
-echo"<hr>";
 $siswas = [
 ["nama" => "Radit", "nilai"=>85],
-["nama" => "Aksa", "nilai"=>60],
-["nama" => "Rangga", "nilai"=>45],
+["nama" => "Raihan", "nilai"=>0],
+["nama" => "Diwa", "nilai"=>5],
 ["nama" => "Bima", "nilai"=>72],
-["nama" => "Aoddi", "nilai"=>50],
+["nama" => "Aoddi", "nilai"=>90],
 ];
 
-
-echo '<table border="1" cellpadding = "5" cellspacing="0">';
+echo "<center><h2>Daftar Nilai Siswa</h2></center>";
+echo '<table border="1" cellpadding = "10" cellspacing="0">';
 echo '<tr>
 <th>Nama</th>
 <th>Nilai</th>
