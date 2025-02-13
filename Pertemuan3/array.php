@@ -19,11 +19,18 @@ $produk = ["Laptop", "Mouse", "Keyboard"];
 
  $produk2 = [
     ["nama" => "Laptop", "Harga"=>7000000, "stok"=>10],
-    ["nama" => "Mouse", "Harga"=>100000, "stok"=>5],
+    ["nama" => "Mouse", "Harga"=>500000, "stok"=>5],
     ["nama" => "Monitor", "Harga"=>1500000, "stok"=>4],
  ];
 
  foreach ($produk2 as $p) {
-    echo "<hr>", "Nama Produk " . $p ["nama"] . ", Harga " . $p
-     ['Harga'] . ", stok" .$p ["stok"]. "<br> <hr>";
+    echo "<hr>", "Nama Produk: " . $p ["nama"] . "<br> Harga: Rp. " . number_format ($p 
+     ['Harga'], 3, ",", ".") ."<br> stok: " .$p ["stok"]. "<br> <hr>";
  }
+
+ function rupiah($angka){
+	
+	$hasil_rupiah = "Rp " . number_format($angka,0,',','.');
+	return $hasil_rupiah;
+ 
+};
