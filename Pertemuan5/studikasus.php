@@ -13,7 +13,20 @@ echo "<center><h3>Studi Kasus</h3></center>";
 echo "<hr>";
 session_start();
 
+$jam_bonus = $jam-200;
 
+if ($jam_bonus >= 1) {
+    $bonus = $jam_bonus * 20000;
+    $ucapan_bonus = "Selamat Anda Mendapatkan Bonus Karena Jam Kerja Anda lebih $jam_bonus jam dari 200 jam kerja <br>";
+} else{
+    $bonus = 0;
+    $ucapan_bonus = "Maaf Anda Belum Mendapatkan Bonus Karena Jam Kerja Anda Kurang Dari 200 Jam Kerja <br>";
+}
+
+
+$persenan = $pajak / 100;
+$total_pajak = $gaji * $persenan;
+$gaji_bersih = $gaji - $total_pajak + $bonus;
 
 if(!isset($_SESSION["karyawan"])){ 
 
@@ -119,9 +132,8 @@ if (isset($_POST["hapus_data"])){
                                         <?php foreach ($_SESSION["karyawan"] as $list): ?>
                                         <tr>
                                             <td><?= ($list["jabatan"]) ?></td>
-
                                             <td><?= ($list["jam_kerja"]) ?></td>
-
+                                            
                                         </tr>
                                         <?php endforeach; ?>
 
